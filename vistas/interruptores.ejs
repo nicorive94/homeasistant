@@ -1,0 +1,39 @@
+<%- include("templates/cabecera", {tituloWeb: "Interruptores"})%>
+<body>
+    <%- include("templates/navbar")%>
+    <!-- <%- include("templates/header")%> -->
+    <h1 class="text-primary"><%= tituloInterruptores %></h1>
+    
+
+    <table class="table table-dark table-hover">
+        <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Luz 1</td>
+        <td><input type="checkbox" id="toggle1" class="offscreen"><label for="toggle1" class="switch"></label></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Luz 2</td>
+        <td><input type="checkbox" id="toggle2" class="offscreen"><label for="toggle2" class="switch"></label></td>
+        
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Luz 3</td>
+        <td><input type="checkbox" id="toggle3" class="offscreen"><label for="toggle3" class="switch"></label></td>
+        
+      </tr>
+    </tbody>
+  
+    </table>
+</body>
+</html>
