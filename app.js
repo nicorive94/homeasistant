@@ -2,16 +2,23 @@
 const express = require('express');
 const app = express();
 
-
+//coneccion a base de datos
+const mongoose = require('mongoose');
 
 //
 require('dotenv').config()
 
+mongoose.connect(process.env.DB_URL,
+    {useNewUrlParser: true, useUnifiedTopology: true}
+
+)
+    .then(() => console.log("base de datos conectada"))
+    .catch(e => console.log(e))
+
 const port = process.env.PORT || 3000;
 
 
-//coneccion a base de datos
-const mongoose = require('mongoose');
+
 
 // const user = "nicorive";
 // const password ="lasheras88";
@@ -19,12 +26,7 @@ const mongoose = require('mongoose');
 
 // const uri = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.f0gix.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`;
 
-mongoose.connect(process.env.DB_URL, 
-    {useNewUrlParser: true, useUnifiedTopology: true}
-    
-)
-    .then(() => console.log("base de datos conectada"))
-    .catch(e => console.log(e))
+
 
 
 app.set('view engine', 'ejs');
