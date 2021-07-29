@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const Paciente = require('../models/paciente');
 
 
 router.get('/', (req, res)=>{
@@ -26,7 +27,7 @@ router.get('/prueba', async (req, res) =>{
 })
 
 
-const Paciente = require('../models/paciente');
+// const Paciente = require('../models/paciente');
 
 
 
