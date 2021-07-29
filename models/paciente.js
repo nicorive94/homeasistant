@@ -9,6 +9,6 @@ const pacienteSchema = new Schema({
 
 // crear modelo
 
-const Paciente = mongoose.model('Paciente', pacienteSchema);
+const Paciente = mongoose.model('rutasWeb', pacienteSchema);
 
 module.exports = Paciente;
