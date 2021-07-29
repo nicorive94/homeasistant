@@ -14,4 +14,21 @@ router.get('/sensores', (req, res) =>{
     res.render("sensores", {tituloSensores: "Sensores"})
 })
 
+router.get('/prueba', async (req, res) =>{
+
+    try {
+        const arrayPacientesDB = await Paciente.find()
+        console.log(arrayPacientesDB)
+        res.render("prueba", {array: arrayPacientesDB})
+    } catch (error) {
+        console.log(error)
+    }
+})
+
+
+const Paciente = require('../models/paciente');
+
+
+
+
 module.exports = router;
